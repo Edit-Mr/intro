@@ -1,91 +1,182 @@
 /** @format */
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 html,
 body {
-  background-color: black;
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-  color: #fff;
-  --t: 0;
+    background-color: black;
+    font-family: "Courier New", Courier, monospace;
+    color: #fff;
+    --t: 0;
 }
-body {
-}
+
 a {
-  color: #fff;
+    color: #fff;
 }
 .asciiBox table {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .asciiBox,
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
 }
 
-.asciiBox {
-  clip-path: inset(3rem 0 3rem 0 round 100px);
-}
 .big-title {
-  font-size: 40vw;
-  color: #000;
-  font-weight: 900;
-  opacity: calc(1 - var(--t));
+    font-size: 40vw;
+    color: #ffffff;
+    font-weight: 900;
+    opacity: calc(1 - var(--t));
+}
+
+.ascii-title {
+    color: #000000;
+    font-size: 10vh;
+    transform: translateY(5%);
+    opacity: calc(1 - var(--t));
 }
 
 header {
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header::before,
+header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    background: #000;
+    z-index: 3;
+    transition: 0.5s ease-in-out;
+}
+header::before {
+    top: 0;
+    left: 0;
+}
+
+header::after {
+    bottom: 0;
+    right: 0;
 }
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  align-items: center;
-  width: calc(100% - 6rem);
-  height: 3rem;
-  padding-inline: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    align-items: center;
+    width: calc(100% - 6rem);
+    height: 3rem;
+    height: 10vh;
+    padding-inline: 3rem;
 }
 nav > div,
 nav > img {
-  flex: 1;
+    flex: 1;
 }
 
 nav > img {
-  height: 2rem;
+    height: 2rem;
+}
+nav a {
+    text-decoration: none;
+}
+
+nav a::before {
+    content: "/";
 }
 
 .left {
-  text-align: left;
+    text-align: left;
 }
 .right {
-  text-align: right;
+    text-align: right;
+}
+.right a {
+    margin-left: 1rem;
+}
+.left,
+.right {
+    transform: translateX(2px);
+}
+
+#space {
+    height: 1000vh;
 }
 
 section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+#intro {
+    justify-content: flex-end;
+}
+#intro div {
+    width: 40%;
+    min-width: min(100%, 20rem);
+    opacity: min(calc(var(--t) * 2), calc(2 - var(--t)));
+}
+
+.type span {
+    font-size: 0.5em;
 }
 
 .flex-right {
-  justify-content: flex-end;
-  text-align: right;
+    text-align: left;
 }
 td {
-  display: inline;
-  /* background-color: #000; */
+    display: inline;
+    /* background-color: #000; */
+}
+#about {
+    justify-content: center;
+}
+#about > div {
+    width: 50%;
+    max-width: 500px;
+}
+
+.type {
+    line-height: 1.3;
+    font-size: 2em;
+    display: inline;
+    background: linear-gradient(#fff, #fff);
+    background-clip: border-box;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 2s ease-in;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body[data-section="1"] #intro .type {
+    background-size: 100% 100%;
+}
+
+body[data-section="2"] #about .type {
+    background-size: 100% 100%;
+}
+body[data-section="3"] header::before,
+body[data-section="3"] header::after {
+    height: 0;
 }
