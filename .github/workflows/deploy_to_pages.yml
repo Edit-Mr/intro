@@ -1,0 +1,47 @@
+# @format
+
+name: Deploy to GitHub Pages Repo
+
+on:
+    push:
+        branches:
+            - main # Trigger on pushes to the main branch
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout source repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20" # Or your required Node version
+
+            - name: Install dependencies and build
+              run: |
+                  npm install
+                  npm run build  # This creates the dist folder
+
+            - name: Clone GitHub Pages repository
+              run: |
+                  git clone https://github.com/Edit-Mr/Edit-Mr.github.io.git --deapth 1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Copy build to pages repo root
+              run: |
+                  cp -rf dist/* Edit-Mr.github.io/   # Copy built files from dist to the pages repo
+
+            - name: Commit and push changes
+              run: |
+                  cd Edit-Mr.github.io
+                  git config user.name "GitHub Actions"
+                  git config user.email "actions@github.com"
+                  git add .
+                  git commit -m "Deploy from Edit-Mr/intro"
+                  git push
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

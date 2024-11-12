@@ -12,18 +12,53 @@
         <title>Elvis Mao</title>
         <link rel="stylesheet" href="/src/style.css" />
         <script type="module" src="/src/main.js"></script>
+        <script type="module" src="/src/earth.js"></script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "ProfilePage",
+                "image": "https://emtech.cc/static/img/EMprofile.png",
+                "url": "https://elvismao.com/",
+                "logo": "https://emtech.cc/static/img/EMprofile.png",
+                "name": "Elvis Mao",
+                "alternateName": ["毛哥EM", "EM"],
+                "description": "Elvis Dragon Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan.",
+                "email": "info@elvismao.com",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "info@elvismao.com"
+                },
+                "foundingDate": "2021-06-04",
+                "numberOfEmployees": {
+                    "@type": "QuantitativeValue",
+                    "value": 1
+                },
+                "sameAs": [
+                    "https://www.instagram.com/elvisdragonmao/",
+                    "https://www.instagram.com/emtech.cc/",
+                    "https://emtech.cc"
+                ],
+                "mainEntity": {
+                    "@type": "Person",
+                    "name": "Elvis Mao",
+                    "alternateName": ["毛哥EM", "EM"]
+                }
+            }
+        </script>
     </head>
 
     <body>
         <nav>
             <div class="left">
-                <h1>Elvis Mao</h1>
+                <h1><a href="/">Elvis Dragon Mao</a></h1>
             </div>
             <img src="/logo.svg" alt="" />
             <div class="right">
-                <a href="/src/index.html">Home</a>
-                <a href="/src/about.html">About</a>
-                <a href="/src/contact.html">Contact</a>
+                <a href="/code"><span>Projects</span></a>
+                <a href="/about"><span>About</span></a>
+                <a href="https://emtech.cc" target="_blank"
+                    ><span>Blog</span></a
+                >
             </div>
         </nav>
         <header>
@@ -44,35 +79,120 @@
           ███████╗██║ ╚═╝ ██║
           ╚══════╝╚═╝     ╚═╝ -->
         </header>
-        <div id="space"></div>
-        <section id="intro">
-            <div>
-                <div class="type">
-                    <span>This is </span><b>Elvis Mao</b><span>.</span><br />
-                    <span>A high scool student,</span><br />
-                    <span>a </span>full stack developer<br />
-                    <span>and a </span>digital artist <span>.</span>
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <div>
-                <div class="type">
-                    <span>I love to create</span>
-                    <div class="create">
-                        <div>experiences</div>
-                        <div>animations</div>
-                        <div>any cool stuff...</div>
+        <div id="space">
+            <div id="intro">
+                <div>
+                    <div class="type">
+                        <span>This is </span><b>Elvis Mao</b><span>.</span
+                        ><br />
+                        <span>A high school student,</span><br />
+                        <span>a </span> full stack developer,<br />
+                        <span>and a </span> digital artist.<span></span>
                     </div>
                 </div>
             </div>
-            <div></div>
-        </section>
-        <section id="data">
-            <div class="data-container"></div>
-        </section>
-
-        <section>Hello</section>
-        <section>Hello</section>
+            <div id="about">
+                <div>
+                    <div id="create">
+                        I love creating
+                        <div class="create">
+                            experiences
+                            <div class="creates">
+                                <div>experiences</div>
+                                <div>animations</div>
+                                <div>future...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+            <div id="data">
+                <div class="data-container">
+                    <div>
+                        <div class="data-number">
+                            <span class="number" data-n="82">0</span>+
+                        </div>
+                        <div class="data-title">Pull Requests in 2024</div>
+                    </div>
+                    <div>
+                        <div class="data-number">
+                            <span class="number" data-n="45">0</span>+
+                        </div>
+                        <div class="data-title">OSS Projects</div>
+                    </div>
+                </div>
+                <div class="data-space"></div>
+                <div class="data-container">
+                    <div>
+                        <div class="data-number">
+                            <span class="number" data-n="1400000">0</span>
+                        </div>
+                        <div class="data-title">Docs translated</div>
+                    </div>
+                    <div>
+                        <div class="data-number">
+                            <span class="number" data-n="1500000">0</span>
+                        </div>
+                        <div class="data-title">Words in blog</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alot">
+            <div id="alot">That's a lo<span id="alot-o"></span>t</div>
+        </div>
+        <div id="earth">
+            <div class="earth-text">
+                <div class="type type-do1">But no matter what I do,</div>
+                <div class="type type-do2">
+                    I just hope to make this world a little different.
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="contact">
+                <div class="contact-container">
+                    <h2>Elvis Mao</h2>
+                    <p>Full Stack Developer | Digital Artist</p>
+                    <div class="socials">
+                        <button class="cybr-btn" id="thisClass" onclick="">
+                            <span id="thisClassTitleG">Projects</span
+                            ><span aria-hidden>_</span>
+                            <span
+                                aria-hidden
+                                class="cybr-btn__glitch"
+                                id="thisClassTitle"
+                                >Projects</span
+                            >
+                            <span
+                                aria-hidden
+                                class="cybr-btn__tag"
+                                id="thisClassCap"
+                                >課程</span
+                            >
+                        </button>
+                        <button class="cybr-btn" id="thisMeet" onclick="">
+                            <span id="thisMeetTitleG">GitHub</span
+                            ><span aria-hidden>_</span>
+                            <span
+                                aria-hidden
+                                class="cybr-btn__glitch"
+                                id="thisMeetTitle"
+                                >GitHub</span
+                            >
+                            <span
+                                aria-hidden
+                                class="cybr-btn__tag"
+                                id="thisMeetCap"
+                                >_</span
+                            >
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="output"></div>
+            <footer>© 2024 by Elvis Mao</footer>
+        </div>
     </body>
 </html>
