@@ -27,7 +27,7 @@ jobs:
 
             - name: Clone GitHub Pages repository
               run: |
-                  git clone https://github.com/Edit-Mr/Edit-Mr.github.io.git --deapth 1
+                  git clone --depth 1 https://github.com/Edit-Mr/Edit-Mr.github.io.git
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
