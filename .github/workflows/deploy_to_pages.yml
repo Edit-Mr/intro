@@ -29,7 +29,7 @@ jobs:
               run: |
                   git clone --depth 1 https://github.com/Edit-Mr/Edit-Mr.github.io.git
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
 
             - name: Copy build to pages repo root
               run: |
@@ -45,4 +45,4 @@ jobs:
                   git commit -m "Deploy from Edit-Mr/intro"
                   git push
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
