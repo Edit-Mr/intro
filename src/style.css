@@ -1,22 +1,4 @@
 /** @format */
-
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-}
-html,
-body {
-    background-color: black;
-    font-family: "Audiowide", "Courier New", Courier, monospace;
-    color: #fff;
-    --t: 0;
-}
-
-a {
-    color: #fff;
-}
 .asciiBox table {
     text-align: center !important;
 }
@@ -74,60 +56,9 @@ header::after {
 }
 header::before,
 body[data-section="1"] header::after,
+body[data-section="0"] header::after,
 body[data-section="2"] header::after {
     height: min(var(--t) * 10vh, 10vh);
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    z-index: 999;
-    align-items: center;
-    width: calc(100% - 6rem);
-    height: 3rem;
-    height: 10vh;
-    padding-inline: 3rem;
-}
-nav > div {
-    flex: 1;
-}
-
-nav > img {
-    height: 2rem;
-}
-nav a {
-    text-decoration: none;
-}
-
-.right a::before {
-    content: "/";
-}
-
-.left {
-    text-align: left;
-}
-.right {
-    text-align: right;
-}
-.right a {
-    margin-left: 1.5em;
-    white-space: nowrap;
-}
-
-.right span {
-    transition: transform 0.3s;
-    display: inline-block;
-}
-
-.right a:hover span {
-    transform: translateX(0.5rem);
-}
-.left,
-.right {
-    transform: translateX(2px);
 }
 
 #space {
@@ -139,7 +70,7 @@ nav a {
     position: sticky;
     left: 0;
     top: 0;
-    width: calc(100% - 4rem);
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -280,6 +211,10 @@ body[data-section="5"] #alot {
     opacity: calc(var(--t) * -2.5 + 9.75);
 }
 
+.asciiBox table tbody {
+    font-size: 1.1em;
+}
+
 #earth .type {
     transition-duration: 1s;
     width: fit-content;
@@ -304,6 +239,7 @@ body[data-section="5"] #alot {
     margin-bottom: 5rem;
 }
 #output {
+    filter: grayscale(calc(-3.333 * clamp(4.3, var(--t), 4.6) + 15.3319));
     font-family: monospace;
     background-image: radial-gradient(
         circle farthest-corner at 75% 75%,
@@ -342,8 +278,6 @@ footer {
     position: absolute;
     right: 2rem;
     bottom: 1.5rem;
-    font-size: 1.3rem;
-    color: #8f8f8f;
 }
 
 .contact {
@@ -356,20 +290,21 @@ footer {
 }
 
 #contact h2 {
+    margin-top: 10vh;
     font-size: min(20vw, 4rem);
 }
 #contact p {
     margin-bottom: 1.5rem;
-    margin-left: .3rem;
+    margin-left: 0.3rem;
 }
 
 /* cyber */
 
 .cybr-btn {
+    text-decoration: none;
+    display: inline-block;
     --primary: #2d2d2d;
     --shadow-primary: #5e5e5e;
-    --color: hsl(0, 0%, 100%);
-    --shadow-primary-hue: 180;
     --clip: polygon(
         0 0,
         100% 0,
@@ -460,7 +395,7 @@ footer {
         8% 80%,
         0 70%
     );
-    color: var(--color);
+    color: #fff;
     cursor: pointer;
     background: transparent;
     text-transform: uppercase;
@@ -629,4 +564,22 @@ a:hover .cybr-btn__glitch {
 .socials {
     position: relative;
     z-index: 2;
+}
+
+.social-links {
+    margin-top: 3rem;
+}
+.social-links img {
+    height: 1.5em;
+    display: inline-block;
+    filter: invert(1);
+    transition: 0.3s;
+}
+
+.social-links a {
+    margin: 0 0.8em;
+}
+
+.social-links a:hover img {
+    scale: 1.1;
 }

@@ -81,7 +81,7 @@ document.body.appendChild(effect.domElement);
 
 document.getElementById("ascii").style.whiteSpace = "prewrap";
 const loadModel = () => {
-    stlLoader.load("/EM.stl", function (geometry) {
+    stlLoader.load("/img/EM.stl", function (geometry) {
         myMesh.material = material;
         myMesh.geometry = geometry;
 
@@ -122,7 +122,7 @@ const loadModel = () => {
                 window.requestAnimationFrame(tick);
             } else {
                 // render();
-                 window.requestAnimationFrame(tick);
+                window.requestAnimationFrame(tick);
             }
         }
 

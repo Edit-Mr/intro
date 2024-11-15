@@ -1,0 +1,559 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            id="ascii"
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1"
+        />
+        <link rel="stylesheet" href="/src/base.css" />
+        <title>About - Elvis Mao</title>
+        <meta name="theme-color" content="#333" />
+        <meta
+            name="description"
+            content="Elvis Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan."
+        />
+        <style>
+            main {
+                margin: auto;
+                max-width: 1532px;
+                width: 100%;
+                padding: 25vh 84px 0;
+                line-height: 1.5;
+            }
+
+            main h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                letter-spacing: -0.5px;
+            }
+
+            main h1 + h2 + p {
+                font-size: 1.3rem;
+                font-weight: 400;
+                margin-bottom: 3rem;
+                max-width: 800px;
+            }
+
+            p {
+                margin-top: 1rem;
+            }
+
+            h2 {
+                margin-top: 2rem;
+                font-size: 1em;
+                font-weight: 900;
+                letter-spacing: 0.25rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid #c4c4c4;
+                text-transform: uppercase;
+            }
+
+            main h1 + h2 {
+                letter-spacing: normal;
+                border: none;
+                margin-bottom: 1rem;
+                color: #f0f0f0;
+            }
+
+            .skill {
+                display: flex;
+                padding: 1.3rem 0;
+            }
+
+            .skill > div {
+                width: 50%;
+                line-height: 2;
+            }
+
+            .skill h3 {
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+
+            .skill li {
+                list-style-type: none;
+            }
+
+            ul {
+                margin: 1rem;
+            }
+            li {
+                color: #e5e5e5;
+            }
+
+            ul li {
+                margin: 0.5rem;
+            }
+            main span {
+                color: #999;
+                font-style: italic;
+            }
+
+            nav {
+                background-color: #000;
+            }
+            main a {
+                text-decoration: none;
+                position: relative;
+            }
+
+            main a::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                bottom: 0;
+                left: 0;
+                transform: scaleX(0);
+                transition: transform 0.3s;
+            }
+
+            main a:hover::after {
+                transform: scaleX(1);
+            }
+
+            .education {
+                width: 100%;
+                padding-block: 2rem;
+                position: relative;
+                margin-top: 2rem;
+                margin-bottom: -1rem;
+            }
+
+            .education::before {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                content: "";
+                display: block;
+                width: 1px;
+                height: 100%;
+                background: linear-gradient(
+                    to bottom,
+                    #000,
+                    #fff 10%,
+                    #fff 80%,
+                    #000
+                );
+                margin: 1rem 0;
+            }
+            .education .school:nth-child(odd) {
+                padding-right: calc(50% + 2rem);
+
+                text-align: right;
+            }
+            .education .school:nth-child(even) {
+                padding-left: calc(50% + 2rem);
+            }
+            .school {
+                position: relative;
+            }
+            .school::after {
+                content: "";
+                display: block;
+                width: 1.5rem;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-100%, -50%);
+            }
+            .school:nth-child(odd)::after {
+                background: linear-gradient(90deg, #000, #fff);
+            }
+            .school:nth-child(even)::after {
+                background: linear-gradient(270deg, #000, #fff);
+                transform: translate(0%, -50%);
+            }
+            .school p {
+                margin-top: 0;
+                color: #999;
+            }
+            .speaker {
+                padding-top: 2rem;
+                margin-left: 1rem;
+            }
+            .speaker li {
+            }
+
+            .github {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-block: 5rem;
+                width: 100%;
+            }
+            .github img {
+                height: 200px;
+            }
+            footer {
+                padding: 1.5rem 2rem;
+            }
+
+            .fridge a::after {
+                display: none;
+            }
+            .fridge a {
+                transition: 0.3s;
+            }
+            .fridge a:hover {
+                scale: 1.1;
+                filter: none;
+            }
+            .fridge img:hover {
+                filter: none;
+            }
+            .fridge img {
+                height: 5rem;
+                filter: grayscale(0.5);
+                transition: 0.3s;
+            }
+
+            .fridge-container {
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                height: 8rem;
+                margin-bottom: 2rem;
+            }
+            .fridge-container::after {
+                content: "";
+                display: block;
+                width: calc(100% + 2rem);
+                height: 100%;
+                background: linear-gradient(
+                    90deg,
+                    #000 1rem,
+                    rgba(0, 0, 0, 0) 4em,
+                    rgba(0, 0, 0, 0) calc(100% - 4em),
+                    #000 calc(100% - 1em)
+                );
+                position: absolute;
+                top: 0;
+                left: -1rem;
+                pointer-events: none;
+            }
+            .fridge-list {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                padding: 2rem 0;
+                animation: marquee 40s linear infinite;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .fridge-list:hover {
+                animation-play-state: paused;
+            }
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            #speaker {
+                margin-top: 3rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="cursor-circle"></div>
+        <nav>
+            <div class="left">
+                <h1><a href="/">Elvis Mao</a></h1>
+            </div>
+            <img src="/logo.svg" alt="" />
+            <div class="right">
+                <a href="/code"><span>Projects</span></a>
+                <a href="/about"><span>About</span></a>
+                <a href="https://emtech.cc" target="_blank"
+                    ><span>Blog</span></a
+                >
+            </div>
+        </nav>
+        <main>
+            <h1>Elvis Dragon Mao</h1>
+            <h2>AKA 毛哥EM, EM, EDM</h2>
+            <p>
+                A digital creator with a passion for design, animation,
+                interaction, and problem-solving.
+            </p>
+            <h2>Skills</h2>
+            <div class="skill">
+                <div>
+                    <h3>I do</h3>
+                    <ol>
+                        <li>High School Homework <span>(sometimes)</span></li>
+                        <li>Full Stack Development</li>
+                        <li>Web Security</li>
+                        <li>DevOps</li>
+                        <li>UI / UX Design</li>
+                        <li>Digital Illustration</li>
+                        <li>Music Production</li>
+                        <li>Film Editing</li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>Languages & Libraries</h3>
+                    <ol>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript / TypeScript</li>
+                        <li>React / Vue</li>
+                        <li>Node.js</li>
+                        <li>Python</li>
+                        <li>C++ / C#</li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>Applications</h3>
+                    <ol>
+                        <li>Nginx</li>
+                        <li>Git</li>
+                        <li>MySQL / MariaDB</li>
+                        <li>Ps / Ai / Id / Ae</li>
+                        <li>Wordpress, Wix</li>
+                        <li>Figma</li>
+                    </ol>
+                </div>
+            </div>
+            <h2>Education</h2>
+            <div class="education">
+                <div class="school">
+                    <div>
+                        <h3>Wagor Bilingual Elementary School</h3>
+                        <p>2013 - 2019</p>
+                    </div>
+                </div>
+                <div class="school">
+                    <div>
+                        <h3>St. Viator Catholic High School</h3>
+                        <p>2019 - 2022</p>
+                    </div>
+                </div>
+                <div class="school">
+                    <div>
+                        <h3>Shi-Yuan Senior High School</h3>
+                        <p>2022 - 2025</p>
+                    </div>
+                </div>
+                <div class="school">
+                    <div>
+                        <h3><span>???</span></h3>
+                        <p><span>2025 - ?</span></p>
+                    </div>
+                </div>
+            </div>
+            <h2>Awards</h2>
+            <ul>
+                <li>SITCON Hackathon 2024 - Best Technical Award</li>
+                <li>2024 Taichung City Outstanding Youth</li>
+                <li>CSSREELS Featured</li>
+                <li>CSS Light - Featured of the Day</li>
+                <li>TopDesignKing - King of the Day</li>
+                <li>Top CSS Gallery</li>
+                <li>Musixmatch Moderator</li>
+                <li>Web Guru Award - Guru of the Day</li>
+                <li>
+                    2024 National High School English Public Forum Debate -
+                    Honorable Mentioned Debater, Judge’s Choice Awards
+                </li>
+                <li>
+                    2024 Yangwang Cup National Science HomeRun Competition -
+                    Bronze Medal
+                </li>
+                <li>
+                    2023 Taichung Information Network Application Competition -
+                    English Typing, Champion
+                </li>
+                <li>
+                    2023 Taichung Information Network Application Competition -
+                    Project, Champion
+                </li>
+                <li>
+                    2024 iThome Ironman Series - "Watch Closely, GitHub Actions
+                    – I'll Only Demonstrate Once."
+                </li>
+                <li>
+                    2023 iThome Ironman Series - "Cool Without Libraries - Fun
+                    with CSS & JS Effects"
+                </li>
+                <li>
+                    2020 Taichung Information Network Application Competition -
+                    Computer Graphics, Champion
+                </li>
+                <li>
+                    2020 Taichung Information Network Application Competition -
+                    Animation Design, Champion
+                </li>
+                <li>
+                    2019 Taichung Information Network Application Competition -
+                    Programming, First Place
+                </li>
+            </ul>
+            <div class="fridge-container">
+                <div class="fridge">
+                    <div class="fridge-list">
+                        <a href="https://ithelp.ithome.com.tw/users/20139821/ironman/6133" target="_blank">
+                        <img
+                            src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/15/web.png"
+                            alt=""
+                        /></a>
+                        <a href="https://ithelp.ithome.com.tw/users/20139821/ironman/7503" target="_blank">
+                            <img
+                            src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/16/devops.png"
+                            alt=""
+                        /></a>
+                        <img
+                            src="https://elvismao.com/img/Featured Badge.svg"
+                            alt=""
+                        />
+                        <a
+                            href="https://www.csslight.com/website/63649/Scaict"
+                            target="_blank"
+                        >
+                            <img
+                                src="http://www.csslight.com/ribbons/csslight-featured-ribbon-left.png"
+                            />
+                        </a>
+                        <a
+                            href="http://webguruawards.com/awards/GOTD/webguruawards_white_bg_color.jpg"
+                            target="_blank"
+                        >
+                            <img
+                                src="https://webguruawards.com/awards/GOTD/img_guru_of_the_day_right.png"
+                            />
+                        </a>
+                        <a
+                            href="https://www.topcssgallery.com/gallery/scaict/"
+                            target="_blank"
+                        >
+                            <img src="https://scaict.org/src/img/TCG.png" />
+                        </a>
+                        <a
+                            href="https://topdesignking.com/website/1502/scaict"
+                            target="_blank"
+                            ><img
+                                src="https://topdesignking.com/public/images/ribbon-neon.png"
+                                alt="TopDesignKing"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+            <h2>Experience</h2>
+            <ul>
+                <li>8 years of web development experience</li>
+                <li>NCTU Bamboo Fox - Team members</li>
+                <li>SCAICT - Information Leader <span>(Retired)</span></li>
+                <li>SYSV - Leader <span>(Retired)</span></li>
+            </ul>
+            <h2 id="speaker">Speaker <span>(bluh bluh bluh)</span></h2>
+            <div class="speaker">
+                <h3>2024</h3>
+                <ul>
+                    <li>
+                        <a href="https://coscup.org/"
+                            >COSCUP - The Path to Freedom: The Open Source
+                            Journey of SCAICT</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://sitcon.org/2024/">
+                            SITCON - From Shortcuts to Terminal: The Programming
+                            Journey on iPhone</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://ais3.org/"
+                            >AIS3 fridge - Community Management</a
+                        >
+                    </li>
+
+                    <li>
+                        <a href="https://www.k12ea.gov.tw/En/"
+                            >K12EA, Ministry of Education</a
+                        >
+                        - Python Camp
+                    </li>
+                    <li>SCAICT Junior High Course - Line Bot</li>
+                    <li>
+                        <a href="https://www.k12ea.gov.tw/En/"
+                            >K12EA, Ministry of Education</a
+                        >
+                        - Having Fun with Arduino Workshop
+                    </li>
+                    <li>
+                        <a href="https://wc.scaict.org/"
+                            >SCAICT United Winter Camp</a
+                        >
+                        - Art Director, Phishing Website Course Instructor
+                    </li>
+                </ul>
+                <h3>2023</h3>
+                <ul>
+                    <li>SCAICT United Orientation - Web Scraping Instructor</li>
+                    <li>SCAICT October Theme Course - Web Design Instructor</li>
+                    <li>
+                        Shi-Yuan Senior High School - Web Design Microcourse
+                    </li>
+                    <li>
+                        Taichung Youth Program - English Debate Station Host
+                    </li>
+                    <li>
+                        <a href="https://www.k12ea.gov.tw/En/"
+                            >K12EA, Ministry of Education</a
+                        >
+                        - Python Web Scraping Workshop
+                    </li>
+                    <li>
+                        <a href="https://www.k12ea.gov.tw/En/"
+                            >K12EA, Ministry of Education</a
+                        >
+                        - Web Design Workshop
+                    </li>
+                </ul>
+                <h3>2022</h3>
+                <ul>
+                    <li>
+                        Stella Matutina Girls' High School - Playing with CSS:
+                        Creating Stunning Animations
+                    </li>
+                    <li>SYTV - C Language Programming Camp Advanced Course</li>
+                    <li>SYTV Guest Speaker - IoT Applications</li>
+                </ul>
+            </div>
+            <div class="github">
+                <img
+                    src="https://github-readme-stats.vercel.app/api?username=Edit-Mr&show_icons=true&theme=dark"
+                    alt=""
+                /><img
+                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Edit-Mr&layout=compact&theme=dark"
+                    alt=""
+                />
+            </div>
+        </main>
+        <footer>© 2024 by Elvis Mao</footer>
+        <script src="/src/style.js"></script>
+        <script>
+            // get width of .fridge-list
+            const fridgeList = document.querySelector(".fridge-list");
+            const fridgeListWidth = fridgeList.offsetWidth;
+            const repeat = Math.ceil(window.innerWidth / fridgeListWidth) * 2;
+            fridgeList.innerHTML = fridgeList.innerHTML.repeat(repeat);
+        </script>
+    </body>
+</html>

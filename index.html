@@ -11,6 +11,7 @@
         />
         <title>Elvis Mao</title>
         <link rel="stylesheet" href="/src/style.css" />
+        <link rel="stylesheet" href="/src/base.css" />
         <script type="module" src="/src/main.js"></script>
         <script type="module" src="/src/earth.js"></script>
         <script type="application/ld+json">
@@ -22,7 +23,7 @@
                 "logo": "https://emtech.cc/static/img/EMprofile.png",
                 "name": "Elvis Mao",
                 "alternateName": ["毛哥EM", "EM"],
-                "description": "Elvis Dragon Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan.",
+                "description": "Elvis Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan.",
                 "email": "info@elvismao.com",
                 "contactPoint": {
                     "@type": "ContactPoint",
@@ -45,17 +46,23 @@
                 }
             }
         </script>
+        <meta name="theme-color" content="#333" />
+        <meta
+            name="description"
+            content="Elvis Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan."
+        />
     </head>
 
     <body>
+        <div class="cursor-circle"></div>
         <nav>
             <div class="left">
                 <h1><a href="/">Elvis Mao</a></h1>
             </div>
             <img src="/logo.svg" alt="" />
             <div class="right">
-                <a href="/code"><span>Projects</span></a>
-                <a href="/about"><span>About</span></a>
+                <a href="/code/"><span>Projects</span></a>
+                <a href="/about/"><span>About</span></a>
                 <a href="https://emtech.cc" target="_blank"
                     ><span>Blog</span></a
                 >
@@ -156,7 +163,7 @@
                     <h2>Elvis Mao</h2>
                     <p>Full Stack Developer | Digital Artist</p>
                     <div class="socials">
-                        <button class="cybr-btn" id="thisClass" onclick="">
+                        <a class="cybr-btn" href="/code.html">
                             <span id="thisClassTitleG">Projects</span
                             ><span aria-hidden>_</span>
                             <span
@@ -165,34 +172,41 @@
                                 id="thisClassTitle"
                                 >Projects</span
                             >
-                            <span
-                                aria-hidden
-                                class="cybr-btn__tag"
-                                id="thisClassCap"
-                                >課程</span
-                            >
-                        </button>
-                        <button class="cybr-btn" id="thisMeet" onclick="">
-                            <span id="thisMeetTitleG">GitHub</span
+                        </a>
+                        <a class="cybr-btn" href="/about/">
+                            <span id="thisMeetTitleG">About</span
                             ><span aria-hidden>_</span>
                             <span
                                 aria-hidden
                                 class="cybr-btn__glitch"
                                 id="thisMeetTitle"
-                                >GitHub</span
+                                >About</span
                             >
-                            <span
-                                aria-hidden
-                                class="cybr-btn__tag"
-                                id="thisMeetCap"
-                                >_</span
-                            >
-                        </button>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="mailto:info@elvismao.com"
+                            ><img
+                                src="/img/icon/envelope-regular.svg"
+                                alt="Mail"
+                        /></a>
+                        <a href="https://github.com/Edit-Mr" target="_blank"
+                            ><img src="/img/icon/github.svg" alt="Mail"
+                        /></a>
+                        <a href="https://t.me/elvisdragonmao" target="_blank"
+                            ><img src="/img/icon/telegram.svg" alt="Telegram"
+                        /></a>
+                        <a
+                            href="https://www.instagram.com/elvisdragonmao/"
+                            target="_blank"
+                            ><img src="/img/icon/Instagram.svg" alt="Instagram"
+                        /></a>
                     </div>
                 </div>
             </div>
             <div id="output"></div>
             <footer>© 2024 by Elvis Mao</footer>
         </div>
+        <script src="/src/style.js"></script>
     </body>
 </html>

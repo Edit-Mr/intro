@@ -1,0 +1,120 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}body {
+    opacity: 0;
+}
+html,
+body {
+    background-color: black;
+    font-family: "Audiowide", "Courier New", Courier, monospace, system-ui;
+    color: #fff;
+    --t: 0;
+}
+
+body {
+    overflow-x: hidden;
+    transition: 0.3s ease-out;
+}
+a {
+    color: #fff;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    height: 10vh;
+    padding-inline: 3rem;
+}
+nav > div {
+    flex: 1;
+}
+
+nav > img {
+    height: 2rem;
+}
+nav a {
+    text-decoration: none;
+}
+
+.right a::before {
+    content: "/";
+}
+
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.right a {
+    margin-left: 1.5em;
+    white-space: nowrap;
+}
+
+.right span {
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.right a:hover span {
+    transform: translateX(0.5rem);
+}
+.left,
+.right {
+    transform: translateX(2px);
+}
+
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.5;
+    background-color: #ffffff77;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+nav h1 a {
+    text-decoration: none;
+    position: relative;
+}
+
+nav h1 a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+nav h1 a:hover::after {
+    transform: scaleX(1);
+}
+
+footer {
+    font-size: 1.3rem;
+    color: #8f8f8f;
+    text-align: right;
+}
