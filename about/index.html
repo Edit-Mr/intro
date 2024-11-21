@@ -593,25 +593,6 @@
             const fridgeListWidth = fridgeList.offsetWidth;
             const repeat = Math.ceil(window.innerWidth / fridgeListWidth) * 2;
             fridgeList.innerHTML = fridgeList.innerHTML.repeat(repeat);
-
-            // aos
-
-            function isElementInViewport(el) {
-                const rect = el.getBoundingClientRect();
-                return rect.bottom < 0 || rect.top > window.innerHeight;
-            }
-
-            function addClassToVisibleElements() {
-                var aosElements = document.querySelectorAll(".aos, li");
-                aosElements.forEach(function (aosElement) {
-                    if (!isElementInViewport(aosElement))
-                        aosElement.classList.add("ed");
-                    else aosElement.classList.remove("ed");
-                });
-            }
-
-            document.addEventListener("scroll", addClassToVisibleElements);
-            addClassToVisibleElements();
         </script>
     </body>
 </html>

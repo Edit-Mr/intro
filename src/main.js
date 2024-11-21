@@ -197,7 +197,9 @@ const scrollAnimation = () => {
     process -= data;
     camera.position.x =
         keyframes[data].px +
-        (keyframes[data + 1].px - keyframes[data].px) * process;
+        (keyframes[data + 1].px - keyframes[data].px) * process +
+        0.2 +
+        (window.innerWidth - 1536) * 0.0004;
     camera.position.y =
         keyframes[data].py +
         (keyframes[data + 1].py - keyframes[data].py) * process;

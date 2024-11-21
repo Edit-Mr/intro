@@ -585,3 +585,14 @@ a:hover .cybr-btn__glitch {
 .social-links a:hover img {
     scale: 1.1;
 }
+
+.aos{
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: all 1s;
+}
+
+.aos.ed{
+    opacity: 1;
+    transform: translateY(0);
+}
