@@ -29,6 +29,9 @@ jobs:
           
       - name: Copy build to pages repo root
         run: |
+          cd Edit-Mr.github.io
+          git rm -rf assets/  # Remove existing assets
+          cd ..
           cp -rf dist/* Edit-Mr.github.io/  # Copy built files from dist to the pages repo
 
       - name: Commit and push changes
