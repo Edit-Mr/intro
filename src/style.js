@@ -20,6 +20,13 @@ document.querySelectorAll("a").forEach(a => {
 
 document.body.style.opacity = 1;
 
+window.addEventListener('pageshow', function(event) {
+    // if (event.persisted) {
+    //     window.location.reload();
+    // }
+    document.body.style.opacity = 1;
+});
+
 
    // const cursorCircle = document.querySelector(".cursor-circle");
             // document.addEventListener("mousemove", e => {

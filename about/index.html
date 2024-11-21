@@ -31,6 +31,26 @@
                 letter-spacing: -0.5px;
             }
 
+            main h1,
+            h1 + h2,
+            h2 + p {
+                opacity: 0;
+                transition: 0.3s ease-out;
+            }
+
+            h1.ed,
+            h2.ed,
+            h2 + p.ed {
+                opacity: 1;
+            }
+            main h1 + h2 {
+                transition-delay: 0.2s;
+            }
+
+            h2 + p {
+                transition-delay: 0.4s;
+            }
+
             main h1 + h2 + p {
                 font-size: 1.3rem;
                 font-weight: 400;
@@ -83,6 +103,14 @@
             }
             li {
                 color: #e5e5e5;
+                opacity: 0;
+                transform: translateY(1rem);
+            }
+
+            li.ed {
+                opacity: 1;
+                transform: translateY(0);
+                transition: 0.3s ease-out;
             }
 
             ul li {
@@ -145,14 +173,21 @@
             }
             .education .school:nth-child(odd) {
                 padding-right: calc(50% + 2rem);
-
                 text-align: right;
+                transform: translateX(2rem);
             }
             .education .school:nth-child(even) {
                 padding-left: calc(50% + 2rem);
+                transform: translateX(-2rem);
             }
             .school {
                 position: relative;
+                opacity: 0;
+                transition: 0.5s ease-out;
+            }
+            .education .school.ed {
+                opacity: 1;
+                transform: none;
             }
             .school::after {
                 content: "";
@@ -163,6 +198,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-100%, -50%);
+                opacity: 0;
             }
             .school:nth-child(odd)::after {
                 background: linear-gradient(90deg, #000, #fff);
@@ -179,9 +215,6 @@
                 padding-top: 2rem;
                 margin-left: 1rem;
             }
-            .speaker li {
-            }
-
             .github {
                 display: flex;
                 align-items: center;
@@ -286,9 +319,9 @@
             </div>
         </nav>
         <main>
-            <h1>Elvis Dragon Mao</h1>
-            <h2>AKA 毛哥EM, EM, EDM</h2>
-            <p>
+            <h1 class="aos">Elvis Dragon Mao</h1>
+            <h2 class="aos">AKA 毛哥EM, EM, EDM</h2>
+            <p class="aos">
                 A digital creator with a passion for design, animation,
                 interaction, and problem-solving.
             </p>
@@ -333,25 +366,25 @@
             </div>
             <h2>Education</h2>
             <div class="education">
-                <div class="school">
+                <div class="school aos">
                     <div>
                         <h3>Wagor Bilingual Elementary School</h3>
                         <p>2013 - 2019</p>
                     </div>
                 </div>
-                <div class="school">
+                <div class="school aos">
                     <div>
                         <h3>St. Viator Catholic High School</h3>
                         <p>2019 - 2022</p>
                     </div>
                 </div>
-                <div class="school">
+                <div class="school aos">
                     <div>
                         <h3>Shi-Yuan Senior High School</h3>
                         <p>2022 - 2025</p>
                     </div>
                 </div>
-                <div class="school">
+                <div class="school aos">
                     <div>
                         <h3><span>???</span></h3>
                         <p><span>2025 - ?</span></p>
@@ -408,15 +441,21 @@
             <div class="fridge-container">
                 <div class="fridge">
                     <div class="fridge-list">
-                        <a href="https://ithelp.ithome.com.tw/users/20139821/ironman/6133" target="_blank">
-                        <img
-                            src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/15/web.png"
-                            alt=""
-                        /></a>
-                        <a href="https://ithelp.ithome.com.tw/users/20139821/ironman/7503" target="_blank">
+                        <a
+                            href="https://ithelp.ithome.com.tw/users/20139821/ironman/6133"
+                            target="_blank"
+                        >
                             <img
-                            src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/16/devops.png"
-                            alt=""
+                                src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/15/web.png"
+                                alt=""
+                        /></a>
+                        <a
+                            href="https://ithelp.ithome.com.tw/users/20139821/ironman/7503"
+                            target="_blank"
+                        >
+                            <img
+                                src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/16/devops.png"
+                                alt=""
                         /></a>
                         <img
                             src="https://elvismao.com/img/Featured Badge.svg"
@@ -554,6 +593,25 @@
             const fridgeListWidth = fridgeList.offsetWidth;
             const repeat = Math.ceil(window.innerWidth / fridgeListWidth) * 2;
             fridgeList.innerHTML = fridgeList.innerHTML.repeat(repeat);
+
+            // aos
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.bottom < 0 || rect.top > window.innerHeight;
+            }
+
+            function addClassToVisibleElements() {
+                var aosElements = document.querySelectorAll(".aos, li");
+                aosElements.forEach(function (aosElement) {
+                    if (!isElementInViewport(aosElement))
+                        aosElement.classList.add("ed");
+                    else aosElement.classList.remove("ed");
+                });
+            }
+
+            document.addEventListener("scroll", addClassToVisibleElements);
+            addClassToVisibleElements();
         </script>
     </body>
 </html>

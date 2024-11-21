@@ -213,6 +213,8 @@ body[data-section="5"] #alot {
 
 .asciiBox table tbody {
     font-size: 1.1em;
+    transform: translateX(-4em);
+    /* font-family: monospace!important; */
 }
 
 #earth .type {
