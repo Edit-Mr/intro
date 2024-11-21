@@ -6,7 +6,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}body {
+}
+body {
     opacity: 0;
 }
 html,
@@ -47,6 +48,81 @@ nav > img {
 }
 nav a {
     text-decoration: none;
+}
+.burger {
+    display: none;
+}
+#burger-togggle {
+    display: none;
+}
+@media (max-width: 65rem) {
+    .burger {
+        display: block;
+        position: relative;
+    }
+    .burger,
+    .burger::before,
+    .burger::after {
+        width: 40px;
+        height: 3px;
+        background-color: #fff;
+        transition: transform 0.3s ease-out;
+    }
+    .burger::before,
+    .burger::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .burger::before {
+        top: -8px;
+        transform-origin: left center;
+    }
+
+    .burger::after {
+        top: 8px;
+        transform-origin: left center;
+    }
+
+    .menu {
+        position: fixed;
+        padding-top: 5rem;
+        top: -3rem;
+        right: 0;
+        width: 10rem;
+        height: 100vh;
+        transform: translateX(0);
+        background-color: #2a2a2a;
+        transition: transform 0.3s ease-out;
+    }
+    .burger-label {
+        margin-left: auto;
+        width: fit-content;
+        height: 40px;
+        display: block;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #burger-togggle:checked + .menu {
+        transform: translateX(-100%);
+    }
+
+    #burger-togggle:checked + .menu .burger {
+        transform: rotate(45deg);
+    }
+
+    #burger-togggle:checked + .menu .burger::before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    #burger-togggle:checked + .menu .burger::after {
+        transform: rotate(-90deg);
+        top: 0;
+    }
 }
 
 .right a::before {
