@@ -177,12 +177,12 @@ nav a {
     transform: translateX(2px);
 }
 
-nav h1 a {
+nav .nav-title a {
     text-decoration: none;
     position: relative;
 }
 
-nav h1 a::after {
+nav .nav-title a::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -194,7 +194,7 @@ nav h1 a::after {
     transition: transform 0.3s;
 }
 
-nav h1 a:hover::after {
+nav .nav-title a:hover::after {
     transform: scaleX(1);
 }
 

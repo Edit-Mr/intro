@@ -1,4 +1,8 @@
 /** @format */
+
+h1{
+    display: none;
+}
 .asciiBox table {
     text-align: center !important;
 }
