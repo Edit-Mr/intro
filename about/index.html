@@ -21,7 +21,7 @@
                 margin: auto;
                 max-width: 1532px;
                 width: 100%;
-                padding: 25vh 84px 0;
+                padding: 25vh min(84px, 5vw) 0;
                 line-height: 1.5;
             }
 
@@ -226,6 +226,7 @@
             }
             .github img {
                 height: 200px;
+                max-width: 100%;
             }
             footer {
                 padding: 1.5rem 2rem;
@@ -300,6 +301,18 @@
             #speaker {
                 margin-top: 3rem;
             }
+
+            @media (max-width:50rem) {
+              .skill{
+                flex-direction: column;
+                gap:2rem;
+              }
+
+              .github img {
+               height: unset;
+            }
+                
+            }
         </style>
         <!-- Google tag (gtag.js) -->
         <script
@@ -325,11 +338,17 @@
             </div>
             <img src="/logo.svg" alt="" />
             <div class="right">
-                <a href="/code"><span>Projects</span></a>
-                <a href="/about"><span>About</span></a>
-                <a href="https://emtech.cc" target="_blank"
-                    ><span>Blog</span></a
-                >
+                <label for="burger-togggle" class="burger-label"
+                    ><div class="burger"></div
+                ></label>
+                <input type="checkbox" name="" id="burger-togggle" />
+                <div class="menu">
+                    <a href="/code/"><span>Projects</span></a>
+                    <a href="/about/"><span>About</span></a>
+                    <a href="https://emtech.cc" target="_blank"
+                        ><span>Blog</span></a
+                    >
+                </div>
             </div>
         </nav>
         <main>

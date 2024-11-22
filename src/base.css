@@ -86,6 +86,7 @@ nav a {
     }
 
     .menu {
+        pointer-events: none;
         position: fixed;
         padding: 5rem;
         font-size: 1.5rem;
@@ -123,6 +124,7 @@ nav a {
 
     #burger-togggle:checked + .menu {
         opacity: 1;
+        pointer-events: all;
     }
 
     #nav:has(.right:has(#burger-togggle:checked)) + main {
@@ -198,6 +200,6 @@ nav h1 a:hover::after {
 
 footer {
     font-size: 1.3rem;
-    color: #8f8f8f;
+    color: #5f5f5f;
     text-align: right;
 }
