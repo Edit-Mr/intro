@@ -79,6 +79,9 @@ nav a {
         top: -8px;
         transform-origin: left center;
     }
+    .right{
+        flex:unset;
+    }
 
     .burger::after {
         top: 8px;
@@ -180,6 +183,7 @@ nav a {
 nav .nav-title a {
     text-decoration: none;
     position: relative;
+    font-size: min(2.125rem, 8vw);
 }
 
 nav .nav-title a::after {
