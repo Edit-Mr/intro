@@ -112,6 +112,7 @@
             .skill {
                 display: flex;
                 padding: 1.3rem 0;
+                position: relative;
             }
 
             .skill > div {
@@ -126,6 +127,27 @@
 
             .skill li {
                 list-style-type: none;
+            }
+            .top {
+                position: relative;
+                z-index: 2;
+            }
+            .em {
+                position: relative;
+                z-index: 1;
+            }
+
+            .em::after {
+                content: "";
+                aspect-ratio: 474 / 500;
+                height: 30rem;
+                width: max(50vw, 30rem);
+                position: absolute;
+                filter: grayscale(1) brightness(0.5);
+                bottom: 1px;
+                right: 0;
+                background: url("/img/head.webp") no-repeat center bottom /
+                    contain;
             }
 
             ul {
@@ -383,13 +405,16 @@
             </div>
         </nav>
         <main>
-            <h1 class="aos">Elvis Dragon Mao</h1>
-            <h2 class="aos">AKA 毛哥EM, EM, EDM</h2>
-            <p class="aos">
-                A digital creator with a passion for design, animation,
-                interaction, and problem-solving.
-            </p>
-            <h2>Skills</h2>
+            <div class="top">
+                <h1 class="aos">Elvis Dragon Mao</h1>
+                <h2 class="aos">AKA 毛哥EM, EM, EDM</h2>
+                <p class="aos">
+                    A digital creator with a passion for design, animation,
+                    interaction, and problem-solving.
+                </p>
+                <h2>Skills</h2>
+            </div>
+            <div class="em"></div>
             <div class="skill">
                 <div>
                     <h3>I do</h3>
