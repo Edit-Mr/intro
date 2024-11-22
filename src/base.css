@@ -87,14 +87,28 @@ nav a {
 
     .menu {
         position: fixed;
-        padding-top: 5rem;
-        top: -3rem;
+        padding: 5rem;
+        font-size: 1.5rem;
+        top: calc(-5vh + 20px);
         right: 0;
-        width: 10rem;
+        width: calc(100vw + 3rem);
         height: 100vh;
-        transform: translateX(0);
-        background-color: #2a2a2a;
-        transition: transform 0.3s ease-out;
+        background-color: rgba(42, 42, 42, 0.255);
+        backdrop-filter: blur(10px);
+        transition: opacity 0.3s ease-out;
+        z-index: -1;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    nav > img {
+        order: -1;
+        margin-right: 0.5rem;
+        margin-left: 1.5rem;
     }
     .burger-label {
         margin-left: auto;
@@ -104,10 +118,15 @@ nav a {
         display: flex;
         align-items: center;
         cursor: pointer;
+        margin-right: 1.5rem;
     }
 
     #burger-togggle:checked + .menu {
-        transform: translateX(-100%);
+        opacity: 1;
+    }
+
+    #nav:has(.right:has(#burger-togggle:checked)) + main {
+        transform: translateX(-10rem);
     }
 
     #burger-togggle:checked + .menu .burger {
@@ -122,6 +141,9 @@ nav a {
     #burger-togggle:checked + .menu .burger::after {
         transform: rotate(-90deg);
         top: 0;
+    }
+    nav {
+        padding: 0;
     }
 }
 
@@ -151,21 +173,6 @@ nav a {
 .left,
 .right {
     transform: translateX(2px);
-}
-
-.cursor-circle {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    opacity: 0.5;
-    background-color: #ffffff77;
-    z-index: 9999;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
 nav h1 a {

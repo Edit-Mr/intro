@@ -607,6 +607,9 @@
             const fridgeListWidth = fridgeList.offsetWidth;
             const repeat = Math.ceil(window.innerWidth / fridgeListWidth) * 2;
             fridgeList.innerHTML = fridgeList.innerHTML.repeat(repeat);
+
+            document.querySelector(".fridge-list").style.animationDuration =
+            window.innerWidth /  50 + "s";
         </script>
     </body>
 </html>

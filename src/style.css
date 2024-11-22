@@ -101,7 +101,7 @@ td {
     justify-content: center;
 }
 #about > div {
-    width: 50%;
+    width: 100%;
     max-width: 500px;
 }
 
@@ -164,15 +164,18 @@ body[data-section="2"] #create {
 }
 
 .data-container > div:first-child {
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
 }
 
 .data-number {
-    font-size: 3.5rem;
+    font-size: min(3.5em, 10vw);
 }
-
+.data-title {
+    font-size: min(1em, 3vw);
+    font-size: 1rem;
+}
 .data-container {
-    width: 13rem;
+    width: 13em;
 }
 /* #alot {
     position: fixed;
@@ -195,6 +198,7 @@ body[data-section="2"] #create {
     top: 50%;
     font-size: calc((var(--t) - 3) * 30vw);
     left: 0;
+    z-index: 3;
     white-space: nowrap;
     transform: translate(
         calc(max((var(--t) - 3.2), -7) * -20em),
@@ -220,6 +224,7 @@ body[data-section="5"] #alot {
 #earth .type {
     transition-duration: 1s;
     width: fit-content;
+    font-size: min(2rem, 5vw);
 }
 .type.typed {
     background-size: 100% 100%;
@@ -274,6 +279,7 @@ canvas {
     position: relative;
     height: 100vh;
     padding: 2rem;
+    overflow: hidden;
 }
 
 footer {
@@ -412,6 +418,7 @@ footer {
     line-height: 4rem;
     transition: background 0.2s;
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .cybr-btn:hover {
@@ -569,7 +576,7 @@ a:hover .cybr-btn__glitch {
 }
 
 .social-links {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .social-links img {
     height: 1.5em;
@@ -586,13 +593,59 @@ a:hover .cybr-btn__glitch {
     scale: 1.1;
 }
 
-.aos{
+.aos {
     opacity: 0;
     transform: translateY(2rem);
     transition: all 1s;
 }
 
-.aos.ed{
+.aos.ed {
     opacity: 1;
     transform: translateY(0);
+}
+main {
+    position: relative;
+    z-index: 2;
+    /* overflow-x: hidden; */
+}
+
+@media (max-width: 65rem) {
+    #output {
+        z-index: -1;
+    }
+    #data {
+        justify-content: space-around;
+    }
+    .data-space {
+        display: none;
+    }
+
+    .asciiBox {
+        color: #ccc !important;
+    }
+}
+
+@media (max-width: 30rem) {
+    #data {
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 2rem;
+    }
+
+    #earth,
+    #data {
+        background-color: #00000031;
+        backdrop-filter: blur(10px);
+    }
+    .data-number {
+        font-size: 3rem;
+    }
+    .cybr-btn {
+        font-size: 1.2rem;
+    }
+
+    #contact p{
+        margin-bottom: 3rem;
+    }
 }
