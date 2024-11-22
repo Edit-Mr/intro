@@ -58,7 +58,7 @@ nav a {
 @media (max-width: 65rem) {
     .burger {
         display: block;
-        position: relative;
+        position: relatve;
     }
     .burger,
     .burger::before,
