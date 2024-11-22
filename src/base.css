@@ -99,6 +99,7 @@ nav a {
         height: 100vh;
         background-color: rgba(42, 42, 42, 0.255);
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         transition: opacity 0.3s ease-out;
         z-index: -1;
         opacity: 0;

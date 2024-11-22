@@ -1,6 +1,6 @@
 /** @format */
 
-h1{
+h1 {
     display: none;
 }
 .asciiBox table {
@@ -641,6 +641,7 @@ main {
     #data {
         background-color: #00000031;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
     .data-number {
         font-size: 3rem;
@@ -649,7 +650,7 @@ main {
         font-size: 1.2rem;
     }
 
-    #contact p{
+    #contact p {
         margin-bottom: 3rem;
     }
 }
