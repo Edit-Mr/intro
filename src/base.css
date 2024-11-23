@@ -58,7 +58,7 @@ nav a {
 @media (max-width: 65rem) {
     .burger {
         display: block;
-        position: relatve;
+        position: relative;
     }
     .burger,
     .burger::before,
@@ -66,26 +66,26 @@ nav a {
         width: 40px;
         height: 3px;
         background-color: #fff;
-        transition: transform 0.3s ease-out;
+        transition: all 0.3s ease-out;
     }
     .burger::before,
     .burger::after {
         content: "";
-        position: absolute;
+        position: absolute;display: block;
         left: 0;
     }
 
     .burger::before {
         top: -8px;
-        transform-origin: left center;
+        /* transform-origin: left center; */
     }
-    .right{
-        flex:unset;
+    .right {
+        flex: unset;
     }
 
     .burger::after {
         top: 8px;
-        transform-origin: left center;
+        /* transform-origin: left center; */
     }
 
     .menu {
@@ -126,27 +126,28 @@ nav a {
         margin-right: 1.5rem;
     }
 
-    #burger-togggle:checked + .menu {
+    #burger-togggle:checked ~ .menu {
         opacity: 1;
         pointer-events: all;
     }
 
-    #nav:has(.right:has(#burger-togggle:checked)) + main {
-        transform: translateX(-10rem);
+    #burger-togggle:checked ~ .burger-label .burger {
+        /* transform: rotate(45deg); */
+        height: 0;
+        transform: translateX(20px);
     }
 
-    #burger-togggle:checked + .menu .burger {
-        transform: rotate(45deg);
-    }
-
-    #burger-togggle:checked + .menu .burger::before {
-        transform: rotate(90deg);
+    #burger-togggle:checked ~ .burger-label .burger::before {
+        transform: rotate(-45deg) translate(-50%, -50%);
         top: 0;
+        width: 20px;
     }
 
-    #burger-togggle:checked + .menu .burger::after {
-        transform: rotate(-90deg);
-        top: 0;
+    #burger-togggle:checked ~ .burger-label .burger::after {
+        transform: rotate(45deg) translate(-50%, -50%);
+        top: 1px;
+        width: 22px;
+        left: -1.5px;
     }
     nav {
         padding: 0;
