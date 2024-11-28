@@ -4,7 +4,7 @@
 
 My self introduction website.
 
-![](public/img/thumbnail.webp)
+![](https://raw.githubusercontent.com/Edit-Mr/intro/refs/heads/main/public/img/thumbnail.webp)
 
 ## How to run
 
