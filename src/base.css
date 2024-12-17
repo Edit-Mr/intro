@@ -218,3 +218,13 @@ footer {
     top: 52%;
     left: 0;
 }
+
+@media (max-width: 1100px) {
+    #awwwards {
+     top: unset;
+     bottom: -2rem;
+     left: 1rem;
+     transform: rotate(90deg) translateX(100%);
+    }
+    
+}
