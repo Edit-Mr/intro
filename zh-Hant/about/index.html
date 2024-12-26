@@ -56,10 +56,27 @@
             name="msapplication-config"
             content="/static/icons/browserconfig.xml"
         />
-        <link rel="alternate" hreflang="en" href="https://elvismao.com/about/" />
-        <link rel="alternate" hreflang="zh-Hant" href="https://elvismao.com/zh-hant/about/" />
-        <link rel="alternate" hreflang="x-default" href="https://elvismao.com/" />
+        <link
+            rel="alternate"
+            hreflang="en"
+            href="https://elvismao.com/about/"
+        />
+        <link
+            rel="alternate"
+            hreflang="zh-Hant"
+            href="https://elvismao.com/zh-hant/about/"
+        />
+        <link
+            rel="alternate"
+            hreflang="x-default"
+            href="https://elvismao.com/"
+        />
         <style>
+            @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap");
+            body {
+                font-family: "Audiowide", "Noto Sans TC", "Courier New", Courier,
+                    monospace, system-ui;
+            }
             main {
                 margin: auto;
                 max-width: 1532px;
@@ -418,17 +435,16 @@
                     <a href="/zh-hant/about/"><span>關於</span></a>
                     <a href="https://emtech.cc" target="_blank"
                         ><span>部落格</span></a
-                    >  <a href="/about" id="toggleLang">🇺🇸</a>
+                    >
+                    <a href="/about" id="toggleLang">🇺🇸</a>
                 </div>
             </div>
         </nav>
         <main>
             <div class="top">
                 <div class="largeName aos">毛哥EM</div>
-                <h2 class="aos">AKA Elvis Dragon Mao, EM, EDM</h2>
-                <p class="aos">
-                    一名熱愛科技、設計、和解決問題的高中生。
-                </p>
+                <h2 class="aos">Elvis Dragon Mao</h2>
+                <p class="aos">一名熱愛科技、設計、和解決問題的高中生。</p>
                 <h2>技能</h2>
             </div>
             <div class="em"></div>
@@ -501,46 +517,24 @@
             <ul>
                 <li>Awwwards - Honorable Mention</li>
                 <li>SITCON 黑客松 2024 - 最佳技術獎</li>
+                <li>2024 iThome 鐵人賽 DevOps 組佳作</li>
                 <li>2024 台中市政府 優秀青年</li>
                 <li>CSSREELS Featured</li>
                 <li>CSS Light - Featured of the Day</li>
                 <li>TopDesignKing - King of the Day</li>
                 <li>Top CSS Gallery</li>
                 <li>Web Guru Award - Guru of the Day</li>
+                <li>113 年全國高級中等學校英語辯論比賽 - 優秀辯士、評審團獎</li>
+                <li>2024 仰望盃全國科學HomeRun實作大賽 - 銅牌獎</li>
+                <li>2023 臺中市中小學資訊網路應用競賽 - 英文打字組優等</li>
+                <li>2023 臺中市中小學資訊網路應用競賽 - 專題製作優等</li>
+                <li>2023 臺中市中小學資訊網路應用競賽 - 程式設計組第一名</li>
                 <li>
-                    113 年全國高級中等學校英語辯論比賽 - 優秀辯士、評審團獎
+                    2023 iThome 鐵人賽【不用庫 也能酷 - 玩轉 CSS & Js 特效】鐵人
                 </li>
-                <li>
-                    2024 仰望盃全國科學HomeRun實作大賽 - 銅牌獎
-                </li>
-                <li>
-                    2023 Taichung Information Network Application Competition -
-                    English Typing, Champion
-                </li>
-                <li>
-                    2023 Taichung Information Network Application Competition -
-                    Project, Champion
-                </li>
-                <li>
-                    2024 iThome Ironman Series - "Watch Closely, GitHub Actions
-                    – I'll Only Demonstrate Once."
-                </li>
-                <li>
-                    2023 iThome Ironman Series - "Cool Without Libraries - Fun
-                    with CSS & JS Effects"
-                </li>
-                <li>
-                    2020 Taichung Information Network Application Competition -
-                    Computer Graphics, Champion
-                </li>
-                <li>
-                    2020 Taichung Information Network Application Competition -
-                    Animation Design, Champion
-                </li>
-                <li>
-                    2019 Taichung Information Network Application Competition -
-                    Programming, First Place
-                </li>
+                <li>2020 臺中市中小學資訊網路應用競賽 - 電腦繪圖組優等</li>
+                <li>2020 臺中市中小學資訊網路應用競賽 - 動畫設計組優等</li>
+                <li>2019 臺中市中小學資訊網路應用競賽 - 程式設計組第一名</li>
             </ul>
             <div class="fridge-container">
                 <div class="fridge">
@@ -607,10 +601,14 @@
             <ul>
                 <li>九年網頁開發經驗</li>
                 <li>
-                    <a href="https://bamboofox.org/">交大網路安全策進會 (Bamboofox)</a> - 成員
+                    <a href="https://bamboofox.org/"
+                        >交大網路安全策進會 (Bamboofox)</a
+                    >
+                    - 成員
                 </li>
                 <li>
-                    <a href="https://scaict.org/">SCAICT</a> - 資訊組組長 <span>(卸任)</span>
+                    <a href="https://scaict.org/">SCAICT</a> - 資訊組組長
+                    <span>(卸任)</span>
                 </li>
                 <li>
                     <a href="https://sytv.scaict.org/">SYSV</a> - 隊長
@@ -629,34 +627,34 @@
                     </li>
                     <li>
                         <a href="https://sitcon.org/2024/">
-                            SITCON 2024 - From Shortcuts to Terminal: The
-                            Programming Journey on iPhone</a
+                            SITCON 2024 議程 - 從捷徑到終端機，iPhone 的程式之旅
+                            講師</a
                         >
                     </li>
                     <li>
                         <a href="https://ais3.org/"
-                            >AIS3 fridge - Community Management</a
+                            >AIS3 Club - 中電會社群經營</a
                         >
                     </li>
 
                     <li>
                         <a href="https://www.k12ea.gov.tw/En/"
-                            >K12EA, Ministry of Education</a
+                            >112 年度國教署新興科技教育遠距示範服務計畫 -
+                            Python爬蟲工作坊講師</a
                         >
-                        - Python Camp
                     </li>
-                    <li>SCAICT Junior High Course - Line Bot</li>
+                    <li>中電會 國中生課程 - Line 機器人講師</li>
                     <li>
                         <a href="https://www.k12ea.gov.tw/En/"
-                            >K12EA, Ministry of Education</a
+                            >國教署新興科技教育遠距示範服務計畫 -
+                            Arduino 樂趣工坊 總召</a
                         >
-                        - Having Fun with Arduino Workshop
                     </li>
                     <li>
                         <a href="https://wc.scaict.org/"
-                            >SCAICT United Winter Camp</a
+                            >知資為資知 - 2024中電會聯合寒訓</a
                         >
-                        - Art Director, Phishing Website Course Instructor
+                        美術總監、釣魚網站課程講師
                     </li>
                 </ul>
                 <h3>2023</h3>
