@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
     <head>
         <meta charset="UTF-8" />
         <meta
@@ -10,13 +10,13 @@
             content="width=device-width, initial-scale=1.0, maximum-scale=1"
         />
         <link rel="stylesheet" href="/src/base.css" />
-        <title>About - Elvis Mao</title>
+        <title>關於我 - 毛哥EM</title>
         <meta name="theme-color" content="#333" />
         <meta
             name="description"
-            content="Elvis Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan."
+            content="一名熱愛科技、設計、和解決問題的高中生。"
         />
-        <meta name="og:title" content="About - Elvis Mao" />
+        <meta name="og:title" content="About - 毛哥EM" />
         <meta name="og:url" content="https://elvismao.com/about" />
         <meta
             name="og:image"
@@ -24,7 +24,7 @@
         />
         <meta
             name="og:description"
-            content="Elvis Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan."
+            content="一名熱愛科技、設計、和解決問題的高中生。"
         />
         <link
             rel="apple-touch-icon"
@@ -68,25 +68,25 @@
                 line-height: 1.5;
             }
 
-            main h1 {
+            main .largeName {
                 font-size: 3rem;
                 font-weight: 700;
                 letter-spacing: -0.5px;
             }
 
-            main h1,
-            h1 + h2,
+            main .largeName,
+            .largeName + h2,
             h2 + p {
                 opacity: 0;
                 transition: 0.3s ease-out;
             }
 
-            h1.ed,
+            .largeName.ed,
             h2.ed,
             h2 + p.ed {
                 opacity: 1;
             }
-            main h1 + h2 {
+            main .largeName + h2 {
                 transition-delay: 0.2s;
             }
 
@@ -94,7 +94,7 @@
                 transition-delay: 0.4s;
             }
 
-            main h1 + h2 + p {
+            main .largeName + h2 + p {
                 font-size: 1.3rem;
                 font-weight: 400;
                 margin-bottom: 3rem;
@@ -115,7 +115,7 @@
                 text-transform: uppercase;
             }
 
-            main h1 + h2 {
+            main .largeName + h2 {
                 letter-spacing: normal;
                 border: none;
                 margin-bottom: 1rem;
@@ -380,6 +380,9 @@
                     height: unset;
                 }
             }
+            h1 {
+                display: none;
+            }
         </style>
         <!-- Google tag (gtag.js) -->
         <script
@@ -398,10 +401,11 @@
     </head>
 
     <body>
+        <h1>關於我</h1>
         <div class="cursor-circle"></div>
         <nav>
             <div class="left">
-                <div class="nav-title"><a href="/">Elvis Mao</a></div>
+                <div class="nav-title"><a href="/zh-hant/">Elvis Mao</a></div>
             </div>
             <img src="/logo.svg" alt="" />
             <div class="right">
@@ -410,42 +414,40 @@
                     ><div class="burger"></div
                 ></label>
                 <div class="menu">
-                    <a href="/code/"><span>Projects</span></a>
-                    <a href="/about/"><span>About</span></a>
+                    <a href="/code/"><span>專案</span></a>
+                    <a href="/zh-hant/about/"><span>關於</span></a>
                     <a href="https://emtech.cc" target="_blank"
-                        ><span>Blog</span></a
-                    >
-                    <a href="/zh-Hant/about" id="toggleLang">🇹🇼</a>
+                        ><span>部落格</span></a
+                    >  <a href="/" id="toggleLang">🇺🇸</a>
                 </div>
             </div>
         </nav>
         <main>
             <div class="top">
-                <h1 class="aos">Elvis Dragon Mao</h1>
-                <h2 class="aos">AKA 毛哥EM, EM, EDM</h2>
+                <div class="largeName aos">毛哥EM</div>
+                <h2 class="aos">AKA Elvis Dragon Mao, EM, EDM</h2>
                 <p class="aos">
-                    A digital creator with a passion for design, animation,
-                    interaction, and problem-solving.
+                    一名熱愛科技、設計、和解決問題的高中生。
                 </p>
-                <h2>Skills</h2>
+                <h2>技能</h2>
             </div>
             <div class="em"></div>
             <div class="skill">
                 <div>
-                    <h3>I do</h3>
+                    <h3>專業</h3>
                     <ol>
-                        <li>Homework <span>(sometimes)</span></li>
-                        <li>Full Stack Development</li>
-                        <li>Web Security</li>
+                        <li>寫作業 <span>(偶爾)</span></li>
+                        <li>全端開發</li>
+                        <li>網路安源</li>
                         <li>DevOps</li>
-                        <li>UI / UX Design</li>
-                        <li>Digital Illustration</li>
-                        <li>Music Production</li>
-                        <li>Film Editing</li>
+                        <li>UI / UX 設計</li>
+                        <li>數位藝術</li>
+                        <li>音樂編曲</li>
+                        <li>影片剪輯</li>
                     </ol>
                 </div>
                 <div>
-                    <h3>Languages & Libraries</h3>
+                    <h3>語言與框架</h3>
                     <ol>
                         <li>HTML</li>
                         <li>CSS</li>
@@ -457,7 +459,7 @@
                     </ol>
                 </div>
                 <div>
-                    <h3>Applications</h3>
+                    <h3>應用程式</h3>
                     <ol>
                         <li>Nginx</li>
                         <li>Git</li>
@@ -468,50 +470,48 @@
                     </ol>
                 </div>
             </div>
-            <h2>Education</h2>
+            <h2>學歷</h2>
             <div class="education">
                 <div class="school aos">
                     <div>
-                        <h3>Wagor Bilingual Elementary School</h3>
+                        <h3>葳格高級中學附設小學</h3>
                         <p>2013 - 2019</p>
                     </div>
                 </div>
                 <div class="school aos">
                     <div>
-                        <h3>St. Viator Catholic High School</h3>
+                        <h3>天主教衛道高級中學</h3>
                         <p>2019 - 2022</p>
                     </div>
                 </div>
                 <div class="school aos">
                     <div>
-                        <h3>Shi-Yuan Senior High School</h3>
+                        <h3>臺中市立西苑高級中學</h3>
                         <p>2022 - 2025</p>
                     </div>
                 </div>
                 <div class="school aos">
                     <div>
-                        <h3>National Yang Ming Chiao Tung University</h3>
+                        <h3>國立陽明交通大學</h3>
                         <p><span>2025 - ???</span></p>
                     </div>
                 </div>
             </div>
-            <h2>Awards</h2>
+            <h2>獲獎</h2>
             <ul>
                 <li>Awwwards - Honorable Mention</li>
-                <li>SITCON Hackathon 2024 - Best Technical Award</li>
-                <li>2024 Taichung City Outstanding Youth</li>
+                <li>SITCON 黑客松 2024 - 最佳技術獎</li>
+                <li>2024 台中市政府 優秀青年</li>
                 <li>CSSREELS Featured</li>
                 <li>CSS Light - Featured of the Day</li>
                 <li>TopDesignKing - King of the Day</li>
                 <li>Top CSS Gallery</li>
                 <li>Web Guru Award - Guru of the Day</li>
                 <li>
-                    2024 National High School English Public Forum Debate -
-                    Honorable Mentioned Debater, Judge’s Choice Awards
+                    113 年全國高級中等學校英語辯論比賽 - 優秀辯士、評審團獎
                 </li>
                 <li>
-                    2024 Yangwang Cup National Science HomeRun Competition -
-                    Bronze Medal
+                    2024 仰望盃全國科學HomeRun實作大賽 - 銅牌獎
                 </li>
                 <li>
                     2023 Taichung Information Network Application Competition -
@@ -605,29 +605,26 @@
             </div>
             <h2>Experience</h2>
             <ul>
-                <li>9 years of web development experience</li>
+                <li>九年網頁開發經驗</li>
                 <li>
-                    <a href="https://bamboofox.org/">NCTU Bamboo Fox</a> -
-                    Security Team members
+                    <a href="https://bamboofox.org/">交大網路安全策進會 (Bamboofox)</a> - 成員
                 </li>
                 <li>
-                    <a href="https://scaict.org/">SCAICT</a> - Information
-                    Leader <span>(Retired)</span>
+                    <a href="https://scaict.org/">SCAICT</a> - 資訊組組長 <span>(卸任)</span>
                 </li>
                 <li>
-                    <a href="https://sytv.scaict.org/">SYSV</a> - Leader
-                    <span>(Retired)</span>
+                    <a href="https://sytv.scaict.org/">SYSV</a> - 隊長
+                    <span>(卸任)</span>
                 </li>
-                <li>Musixmatch Moderator <span>(Retired)</span></li>
+                <li>Musixmatch 管理員 <span>(卸任)</span></li>
             </ul>
-            <h2 id="speaker">Speaker <span>(bluh bluh bluh)</span></h2>
+            <h2 id="speaker">講者 <span>(bluh bluh bluh)</span></h2>
             <div class="speaker">
                 <h3>2024</h3>
                 <ul>
                     <li>
                         <a href="https://coscup.org/"
-                            >COSCUP 2025 - The Path to Freedom: The Open Source
-                            Journey of SCAICT</a
+                            >COSCUP 2025 - 前往自由的路上: 中電喵的開源之旅</a
                         >
                     </li>
                     <li>

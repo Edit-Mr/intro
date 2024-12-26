@@ -251,7 +251,7 @@ body[data-section="5"] #alot {
 }
 #output {
     filter: grayscale(calc(-3.333 * clamp(4.3, var(--t), 4.6) + 15.3319));
-    font-family: monospace;
+    font-family: Consolas, monospace;
     background-image: radial-gradient(
         circle farthest-corner at 75% 75%,
         rgba(0, 0, 16, 1) 0%,

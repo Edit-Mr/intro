@@ -1,5 +1,33 @@
 /** @format */
 
+const getCookie = name => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+};
+const setCookie = (name, value, days) => {
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+};
+const lang =
+    getCookie("lang") ||
+    ((navigator.language || navigator.userLanguage).includes("zh")
+        ? "zh-hant"
+        : "en");
+// when page loaded
+if (
+    lang === "zh-hant" &&
+    !window.location.pathname.toLowerCase().includes("zh-hant")
+) {
+    window.location.href = `/zh-Hant${window.location.pathname}`;
+}
+
+document.getElementById("toggleLang").addEventListener("click", e => {
+    const newLang = lang === "en" ? "zh-hant" : "en";
+    setCookie("lang", newLang, 365);
+});
+
 // if any <a> been pressed, set body opacity = 0
 document.querySelectorAll("a").forEach(a => {
     a.addEventListener("click", e => {

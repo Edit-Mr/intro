@@ -158,7 +158,9 @@ nav a {
 .right a::before {
     content: "/";
 }
-
+#toggleLang::before{
+    content: "";
+}
 .left {
     text-align: left;
 }
