@@ -4,10 +4,10 @@
     <url>
         <loc>https://elvismao.com/zh-Hant/about/</loc>
         <image:image>
-            <image:loc>https://elvismao.com/img/avatar.png/</image:loc>
+            <image:loc>https://elvismao.com/img/avatar.png</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://elvismao.com/img/sitcon.png/</image:loc>
+            <image:loc>https://elvismao.com/img/sitcon.jpg</image:loc>
         </image:image>
     </url>
 </urlset>
