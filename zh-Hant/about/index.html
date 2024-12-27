@@ -10,6 +10,7 @@
             content="width=device-width, initial-scale=1.0, maximum-scale=1"
         />
         <link rel="stylesheet" href="/src/base.css" />
+        <link rel="stylesheet" href="/src/about.css" />
         <title>關於我 - 毛哥EM</title>
         <meta name="theme-color" content="#333" />
         <meta
@@ -75,330 +76,7 @@
             @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap");
             body {
                 font-family: "Audiowide", "Noto Sans TC", "Courier New", Courier,
-                    monospace, system-ui!important;
-            }
-            main {
-                margin: auto;
-                max-width: 1532px;
-                width: 100%;
-                padding: 25vh min(84px, 5vw) 0;
-                line-height: 1.5;
-            }
-
-            main .largeName {
-                font-size: 3rem;
-                font-weight: 700;
-                letter-spacing: -0.5px;
-            }
-
-            main .largeName,
-            .largeName + h2,
-            h2 + p {
-                opacity: 0;
-                transition: 0.3s ease-out;
-            }
-
-            .largeName.ed,
-            h2.ed,
-            h2 + p.ed {
-                opacity: 1;
-            }
-            main .largeName + h2 {
-                transition-delay: 0.2s;
-            }
-
-            h2 + p {
-                transition-delay: 0.4s;
-            }
-
-            main .largeName + h2 + p {
-                font-size: 1.3rem;
-                font-weight: 400;
-                margin-bottom: 3rem;
-                max-width: 800px;
-            }
-
-            p {
-                margin-top: 1rem;
-            }
-
-            h2 {
-                margin-top: 2rem;
-                font-size: 1em;
-                font-weight: 900;
-                letter-spacing: 0.25rem;
-                padding-bottom: 0.5rem;
-                border-bottom: 1px solid #c4c4c4;
-                text-transform: uppercase;
-            }
-
-            main .largeName + h2 {
-                letter-spacing: normal;
-                border: none;
-                margin-bottom: 1rem;
-                color: #f0f0f0;
-            }
-
-            .skill {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 1.3rem 0;
-                position: relative;
-                gap: 2rem;
-            }
-
-            .skill > div {
-                flex: 1;
-                line-height: 2;
-            }
-
-            .skill h3 {
-                font-weight: 600;
-                margin-bottom: 0.5rem;
-            }
-
-            .skill li {
-                list-style-type: none;
-            }
-            .top {
-                position: relative;
-                z-index: 2;
-            }
-            .em {
-                position: relative;
-                z-index: 1;
-            }
-
-            .em::after {
-                content: "";
-                aspect-ratio: 474 / 500;
-                height: 30rem;
-                width: max(50vw, 30rem);
-                position: absolute;
-                filter: grayscale(0.5) brightness(73%) contrast(192%);
-                bottom: 1px;
-                right: 0;
-                background: url("/img/head.webp") no-repeat center bottom /
-                    contain;
-            }
-
-            ul {
-                margin: 1rem;
-            }
-            li {
-                color: #e5e5e5;
-                opacity: 0;
-                transform: translateY(1rem);
-            }
-
-            li.ed {
-                opacity: 1;
-                transform: translateY(0);
-                transition: 0.3s ease-out;
-            }
-
-            ul li {
-                margin: 0.5rem;
-            }
-            main span {
-                color: #999;
-                font-style: italic;
-            }
-
-            nav {
-                background-color: #0000003b;
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-            }
-            main a {
-                text-decoration: none;
-                position: relative;
-            }
-
-            main a::after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                background-color: #fff;
-                bottom: 0;
-                left: 0;
-                transform: scaleX(0);
-                transition: transform 0.3s;
-            }
-
-            main a:hover::after {
-                transform: scaleX(1);
-            }
-
-            .education {
-                width: 100%;
-                padding-block: 2rem;
-                position: relative;
-                margin-top: 2rem;
-                margin-bottom: -1rem;
-            }
-
-            .education::before {
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                content: "";
-                display: block;
-                width: 1px;
-                height: 100%;
-                background: linear-gradient(
-                    to bottom,
-                    #000,
-                    #fff 10%,
-                    #fff 80%,
-                    #000
-                );
-                margin: 1rem 0;
-            }
-            .education .school:nth-child(odd) {
-                padding-right: calc(50% + 2rem);
-                text-align: right;
-                transform: translateX(2rem);
-            }
-            .education .school:nth-child(even) {
-                padding-left: calc(50% + 2rem);
-                transform: translateX(-2rem);
-            }
-            .school {
-                position: relative;
-                opacity: 0;
-                transition: 0.5s ease-out;
-            }
-            .education .school.ed {
-                opacity: 1;
-                transform: none;
-            }
-            .school::after {
-                content: "";
-                display: block;
-                width: 1.5rem;
-                height: 1px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-100%, -50%);
-                opacity: 0;
-            }
-            .school:nth-child(odd)::after {
-                background: linear-gradient(90deg, #000, #fff);
-            }
-            .school:nth-child(even)::after {
-                background: linear-gradient(270deg, #000, #fff);
-                transform: translate(0%, -50%);
-            }
-            .school p {
-                margin-top: 0;
-                color: #999;
-            }
-            .speaker {
-                padding-top: 2rem;
-                margin-left: 1rem;
-            }
-            .github {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 1rem;
-                flex-wrap: wrap;
-                margin-block: 5rem;
-                width: 100%;
-            }
-            .github img {
-                height: 200px;
-                max-width: 100%;
-            }
-            footer {
-                padding: 1.5rem 2rem;
-            }
-
-            .fridge a::after {
-                display: none;
-            }
-            .fridge a {
-                transition: 0.3s;
-            }
-            .fridge a:hover {
-                scale: 1.1;
-                filter: none;
-            }
-            .fridge img:hover {
-                filter: none;
-            }
-            .fridge img {
-                height: 5rem;
-                filter: grayscale(0.5);
-                transition: 0.3s;
-            }
-
-            .fridge-container {
-                overflow: hidden;
-                position: relative;
-                width: 100%;
-                height: 8rem;
-                margin-bottom: 2rem;
-            }
-            .fridge-container::after {
-                content: "";
-                display: block;
-                width: calc(100% + 2rem);
-                height: 100%;
-                background: linear-gradient(
-                    90deg,
-                    #000 1rem,
-                    rgba(0, 0, 0, 0) 4em,
-                    rgba(0, 0, 0, 0) calc(100% - 4em),
-                    #000 calc(100% - 1em)
-                );
-                position: absolute;
-                top: 0;
-                left: -1rem;
-                pointer-events: none;
-            }
-            .fridge-list {
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                padding: 2rem 0;
-                animation: marquee 40s linear infinite;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-            .fridge-list:hover {
-                animation-play-state: paused;
-            }
-            @keyframes marquee {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(-50%);
-                }
-            }
-
-            #speaker {
-                margin-top: 3rem;
-            }
-
-            @media (max-width: 50rem) {
-                /* .skill {
-                    flex-direction: column;
-                } */
-
-                .github img {
-                    height: unset;
-                }
-            }
-            h1 {
-                display: none;
+                    monospace, system-ui !important;
             }
         </style>
         <!-- Google tag (gtag.js) -->
@@ -466,7 +144,7 @@
                     <a href="/code/"><span>專案</span></a>
                     <a href="/zh-hant/about/"><span>關於</span></a>
                     <a href="https://emtech.cc" target="_blank"
-                        ><span>部落格</span></a
+                        ><span>密技</span></a
                     >
                     <a href="/about" id="toggleLang">🇺🇸</a>
                 </div>
@@ -732,7 +410,25 @@
                 />
             </div>
         </main>
-        <footer>© 2024 by Elvis Mao</footer>
+        <footer>
+            <div class="social-links">
+                <a href="mailto:info@elvismao.com"
+                    ><img src="/img/icon/envelope-regular.svg" alt="Mail"
+                /></a>
+                <a href="https://github.com/Edit-Mr" target="_blank"
+                    ><img src="/img/icon/github.svg" alt="Mail"
+                /></a>
+                <a href="https://t.me/elvisdragonmao" target="_blank"
+                    ><img src="/img/icon/telegram.svg" alt="Telegram"
+                /></a>
+                <a
+                    href="https://www.instagram.com/elvisdragonmao/"
+                    target="_blank"
+                    ><img src="/img/icon/Instagram.svg" alt="Instagram"
+                /></a>
+            </div>
+            <div>© 2024 by Elvis Mao</div>
+        </footer>
         <script type="module" src="/src/style.js"></script>
         <script>
             // get width of .fridge-list

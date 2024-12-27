@@ -574,29 +574,6 @@ a:hover .cybr-btn__glitch {
     --primary-hue: 260;
 } */
 
-.socials {
-    position: relative;
-    z-index: 2;
-}
-
-.social-links {
-    margin-top: 2rem;
-}
-.social-links img {
-    height: 1.5em;
-    display: inline-block;
-    filter: invert(1);
-    transition: 0.3s;
-}
-
-.social-links a {
-    margin: 0 0.8em;
-}
-
-.social-links a:hover img {
-    scale: 1.1;
-}
-
 .aos {
     opacity: 0;
     transform: translateY(2rem);
