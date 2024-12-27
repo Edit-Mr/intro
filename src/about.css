@@ -88,20 +88,20 @@ main .largeName + h2 {
     z-index: 2;
 }
 .em {
-    position: relative;
-    z-index: 1;
-}
-
-.em::after {
-    content: "";
-    aspect-ratio: 474 / 500;
-    height: 30rem;
-    width: max(50vw, 30rem);
     position: absolute;
     filter: grayscale(0.5) brightness(73%) contrast(192%);
     bottom: 1px;
     right: 0;
-    background: url("/img/head.webp") no-repeat center bottom / contain;
+    z-index: -1;
+    max-width: max(50vw, 30rem);
+    height: 30rem;
+}
+.emSitcon{
+    margin: auto;
+}
+.emSitcon img{
+    max-width: 100%;
+    width: 30rem;
 }
 
 ul {
@@ -216,6 +216,8 @@ main a:hover::after {
 .speaker {
     padding-top: 2rem;
     margin-left: 1rem;
+    display: flex;
+    align-items: center;justify-content: space-between;
 }
 .github {
     display: flex;
@@ -315,7 +317,9 @@ footer {
     /* .skill {
         flex-direction: column;
     } */
-
+    .em {
+        opacity: 0.6;
+    }
     .github img {
         height: unset;
     }
@@ -323,8 +327,13 @@ footer {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-    }.social-links{
-        margin-bottom: .2rem;
+    }
+    .social-links {
+        margin-bottom: 0.2rem;
+    }
+    .speaker{
+        flex-direction: column;
+        gap: 2rem;
     }
 }
 h1 {
