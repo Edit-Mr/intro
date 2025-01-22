@@ -412,7 +412,7 @@
                     </div>
                 </div>
             </div>
-            <h2>Experience</h2>
+            <h2>經歷</h2>
             <ul>
                 <li>九年網頁開發經驗</li>
                 <li>
@@ -431,6 +431,19 @@
                     <span>(卸任)</span>
                 </li>
                 <li>Musixmatch 管理員 <span>(卸任)</span></li>
+            </ul>
+            <!-- <h2>合作夥伴</h2>
+            <div class="fridge-container">
+                <div class="fridge">
+                    <div class="fridge-list">
+                      <img src="/img/straight-logo-white.webp" alt="">
+                    </div>
+                </div>
+            </div> -->
+            <h2>證照</h2>
+            <ul>
+                <li>三等業餘無線電人員 (呼號 BM4LTC)</li>
+                <li>TOEIC 多益 - 金色證書</li>
             </ul>
             <h2 id="speaker">講者 <span>(bluh bluh bluh)</span></h2>
             <div class="speaker">
@@ -548,13 +561,15 @@
         <script type="module" src="/src/style.js"></script>
         <script>
             // get width of .fridge-list
-            const fridgeList = document.querySelector(".fridge-list");
-            const fridgeListWidth = fridgeList.offsetWidth;
-            const repeat = Math.ceil(window.innerWidth / fridgeListWidth) * 2;
-            fridgeList.innerHTML = fridgeList.innerHTML.repeat(repeat);
-
-            document.querySelector(".fridge-list").style.animationDuration =
+            const fridgeLists = document.querySelectorAll(".fridge-list");
+            for (let i = 0; i < fridgeLists.length; i++) {
+                const fridgeList = fridgeLists[i];
+                const fridgeListWidth = fridgeList.offsetWidth;
+                const repeat = Math.ceil(window.innerWidth / fridgeListWidth) * 2;
+                fridgeList.innerHTML = fridgeList.innerHTML.repeat(repeat);
+                fridgeList.style.animationDuration =
                 window.innerWidth / 20 + "s";
+            }
         </script>
     </body>
 </html>
