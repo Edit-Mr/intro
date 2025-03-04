@@ -60,7 +60,7 @@
         <link
             rel="alternate"
             hreflang="en"
-            href="https://elvismao.com/about/"
+            href="https://elvismao.com/about/en/"
         />
         <link
             rel="alternate"
@@ -70,7 +70,7 @@
         <link
             rel="alternate"
             hreflang="x-default"
-            href="https://elvismao.com/"
+            href="https://elvismao.com/en/about/"
         />
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap");
@@ -565,10 +565,11 @@
             for (let i = 0; i < fridgeLists.length; i++) {
                 const fridgeList = fridgeLists[i];
                 const fridgeListWidth = fridgeList.offsetWidth;
-                const repeat = Math.ceil(window.innerWidth / fridgeListWidth) * 2;
+                const repeat =
+                    Math.ceil(window.innerWidth / fridgeListWidth) * 2;
                 fridgeList.innerHTML = fridgeList.innerHTML.repeat(repeat);
                 fridgeList.style.animationDuration =
-                window.innerWidth / 20 + "s";
+                    window.innerWidth / 20 + "s";
             }
         </script>
     </body>

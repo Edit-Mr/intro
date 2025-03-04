@@ -1,15 +1,18 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
+/** @format */
+
+import { resolve } from "path";
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'about/index.html'),
-        "zh-Hant": resolve(__dirname, 'zh-Hant/index.html'),
-        "zh-Hant/about": resolve(__dirname, 'zh-Hant/about/index.html'),
-      },
+    build: {
+        rollupOptions: {
+            input: {
+                main: "index.html",
+                en: "en/index.html",
+                enAbout: "en/about/index.html",
+                zhHant: "zh-Hant/index.html",
+                zhHantAbout: "zh-Hant/about/index.html",
+            },
+        },
     },
-  },
-})
+});
