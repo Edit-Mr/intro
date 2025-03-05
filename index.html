@@ -9,7 +9,8 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1"
         />
-        <title>毛哥EM / Elvis Mao</title>
+        <title>Elvis Mao / 毛哥EM</title>
+        <script type="module" src="/src/style.js"></script>
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -40,10 +41,6 @@
             name="msapplication-config"
             content="/static/icons/browserconfig.xml"
         />
-        <link rel="stylesheet" href="/src/style.css" />
-        <link rel="stylesheet" href="/src/base.css" />
-        <script type="module" src="/src/mainZh.js"></script>
-        <script type="module" src="/src/earth.js"></script>
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org/",
@@ -51,8 +48,8 @@
                 "image": "https://emtech.cc/static/img/EMprofile.png",
                 "url": "https://elvismao.com/",
                 "logo": "https://emtech.cc/static/img/EMprofile.png",
-                "name": "毛哥EM的基地",
-                "alternateName": ["毛宥鈞", "毛哥EM", "EM"],
+                "name": "毛哥EM",
+                "alternateName": ["毛宥鈞", "Elvis Mao", "EM"],
                 "description": "Elvis Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan.",
                 "email": "info@elvismao.com",
                 "contactPoint": {
@@ -162,7 +159,7 @@
         <meta name="theme-color" content="#333" />
         <meta
             name="description"
-            content="毛哥EM (毛宥鈞) 一名熱愛科技、設計、和解決問題的高中生。"
+            content="Elvis Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan."
         />
         <meta name="og:title" content="Elvis Mao" />
         <meta name="og:url" content="https://elvismao.com" />
@@ -172,7 +169,7 @@
         />
         <meta
             name="og:description"
-            content="毛哥EM (毛宥鈞) 一名熱愛科技、設計、和解決問題的高中生。"
+            content="Elvis Mao (毛哥EM) is a full stack developer, and a digital creator from Taiwan."
         />
         <link rel="alternate" hreflang="en" href="https://elvismao.com/en/" />
         <link
@@ -185,8 +182,13 @@
             hreflang="x-default"
             href="https://elvismao.com/en/"
         />
+        <link rel="canonical" href="https://elvismao.com/en/" />
     </head>
     <body>
-        <script type="module" src="/src/style.js"></script>
+        <!-- SEO Friendly Only For Spider -->
+        <div style="display: none;">
+            <h2><a href="/zh-Hant/">毛哥EM</a></h2>
+            <h2><a href="/en/">Elvis Mao</a></h2>
+        </div>
     </body>
 </html>
