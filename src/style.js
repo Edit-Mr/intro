@@ -10,13 +10,13 @@ const setCookie = (name, value, days) => {
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
 };
-const supportedLangs = ["en", "zh-hant"];
-if (!supportedLangs.includes(window.location.pathname.toLowerCase().split("/")[1])) {
+const supportedLangs = ["en", "zh-Hant"];
+if (!supportedLangs.includes(window.location.pathname.split("/")[1])) {
     let lang =
         getCookie("lang") || navigator.language || navigator.userLanguage;
     const replacements = [
-        ["zh-TW", "zh-hant"],
-        ["zh-CN", "zh-hans"],
+        ["zh-TW", "zh-Hant"],
+        ["zh-CN", "zh-Hant"],
     ];
     lang = replacements.reduce((s, [from, to]) => s.replace(from, to), lang);
     lang = supportedLangs.includes(lang) ? lang : "en";
@@ -24,7 +24,7 @@ if (!supportedLangs.includes(window.location.pathname.toLowerCase().split("/")[1
     window.location.href = `/${lang}${window.location.pathname}`;
 } else {
     document.getElementById("toggleLang").addEventListener("click", e => {
-        const newLang = lang === "en" ? "zh-hant" : "en";
+        const newLang = lang === "en" ? "zh-Hant" : "en";
         setCookie("lang", newLang, 365);
     });
 
