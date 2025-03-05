@@ -12,6 +12,7 @@ export default defineConfig({
                 enAbout: "en/about/index.html",
                 zhHant: "zh-Hant/index.html",
                 zhHantAbout: "zh-Hant/about/index.html",
+                about: "about/index.html",
             },
         },
     },
