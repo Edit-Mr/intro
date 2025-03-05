@@ -10,7 +10,6 @@
             content="width=device-width, initial-scale=1.0, maximum-scale=1"
         />
         <title>Elvis Mao / 毛哥EM</title>
-        <script type="module" src="/src/style.js"></script>
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -183,8 +182,23 @@
             href="https://elvismao.com/en/"
         />
         <link rel="canonical" href="https://elvismao.com/en/" />
+                <!-- Google tag (gtag.js) -->
+                <script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-9R5PZG2VQG"
+            ></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag("js", new Date());
+    
+                gtag("config", "G-9R5PZG2VQG");
+            </script>
     </head>
     <body>
+        <script type="module" src="/src/style.js"></script>
         <!-- SEO Friendly Only For Spider -->
         <div style="display: none;">
             <h2><a href="/zh-Hant/">毛哥EM</a></h2>
